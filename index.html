@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Store</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(assets/181138882_1c1db09e-9a5d-4336-8922-f1d07570ec45.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .bar {
+            padding: 30px ;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .bar a{
+            color: rgb(46, 44, 51);
+            text-decoration: none;
+            margin: 0 23px;
+        }
+
+        .logo{
+            font-weight: bold;
+        }
+
+        .login{
+            text-align: center;
+            float: right;
+            font-weight: bold;
+            padding: 5px 20px;
+        }
+
+        .box{
+            width: 95%;
+            max-width: 1200px;
+            min-height: 400px;
+            height: auto;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            width: 95%;
+            max-width: 1200px;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .container img{
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .container div{
+            min-height: 180px;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .koleksi{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .koleksi img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .collections-row{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 95%;
+            max-width: 1200px;
+            margin: 10px auto 20px;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        
+        .btn-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0 50px;
+        }
+        .btn-wrapper .btn{
+            display: inline-block;
+            min-width: 160px;
+        }
+
+        .koleksi--full{
+            max-width: 1200px;
+            width: 95%;
+            min-height: 400px;
+            height: auto;
+        }
+
+        .content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .content div{
+            min-height: 50px;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .diskon{
+            width: 95%;
+            max-width: 1200px;
+            min-height: 300px;
+            height: auto;
+            margin: 70px auto ;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .diskon img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .best{
+            margin: 30px auto 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 10px;
+        }
+
+        div.btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0px 50px;
+            padding: 5px 34px;
+        }
+
+        .learn div{
+            height: 620px;
+            width: 100%;
+            display: flex;
+        }
+        .learn div img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gambar-overlay{
+            position: relative; 
+            height: 620px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .gambar-overlay .judul{
+            position: absolute;
+            left: 100px;
+            top: 40%;
+            padding: 10px 50px;
+        }
+        
+        .image-overlay{
+            position: relative; 
+            height: 620px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .image-overlay .judul{
+            position: absolute;
+            right: 100px;
+            top: 40%;
+            padding: 10px 50px;
+            color: whitesmoke;
+        }
+
+
+        .footer{
+            margin-top: 10%;
+            background-color: rgb(207, 207, 207);
+            padding: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+
+        .footer p{
+            text-decoration: none;
+            color: rgb(46, 44, 51);
+            text-align: center;
+        }
+
+        .footer h5{
+            text-decoration: none;
+            color: rgb(46, 44, 51);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="bar">
+            <a class="logo" href="index.html">Technology Store</a>
+            <a href="index.html">Home</a>
+            <a href="index.html">Product</a> 
+            <a href="index.html">News</a>
+            <a class="login" href="index.html">SUPPORT</a>
+        </div>
+    </header>
+    <section>
+        <div class="box">
+            <img src="https://cdn.shopify.com/s/files/1/0755/1365/9703/files/3_77c6b052-de2b-4a0d-894a-6dddd33b7462.png?v=1753342854" alt="headphone">
+        </div>
+                <div class="container">
+                    <div>
+                        <img src="https://mma.prnasia.com/media2/2589443/HAVIT_New_Audio_Innovations_CES_2025.jpg?p=medium600" alt="HAVIT_New_Audio_Innovations_CES_2025">
+                    </div>
+                    <div>
+                        <img src="https://mma.prnasia.com/media2/2309474/image_5030163_30953409.jpg?p=medium600" alt="havit product">
+                    </div>
+                </div>
+
+                <!--untuk product-->
+                <div class="container">
+                    <div>
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lzypd92wgkbs26_tn.webp" alt="id-test-11">
+                    </div>
+                    <div>
+                        <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2024/8/23/729e7f96-29a3-4885-b172-922ac9521333.jpg" alt="havit-gaming-headphones">
+                    </div>
+                    <div>
+                        <img src="https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/155c111c2d3945e39c2f97da1f404ef7~.jpeg" alt="M9021-201">
+                    </div>
+                    <div>
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasf-m1mayix9hoik70" alt="gaming_RBG">
+                    </div>
+                    <div>
+                        <img src="https://images.tokopedia.net/img/cache/200-square/VqbcmM/2024/10/15/93c5bc26-74bf-49ae-b10f-e4f931b8e320.jpg?ect=4g" alt="PJ219-PRO-_Listing-_-2024_01">
+                    </div>
+                </div>
+                    <div class="btn-wrapper">
+                        <button type="button" class="btn btn-secondary">VIEW ALL</button>
+                    </div>
+
+        <!--bagian collection-->
+        <div class="best">
+            <h1 style="font-weight: bold;">Collections</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos explicabo excepturi voluptatum</p>
+        </div>
+        <div class="collections-row">
+            <div class="koleksi card">
+                <img src="https://havitsmart.com/cdn/shop/collections/audio-series-937018.jpg?v=1756952344" alt="Audio">
+            </div>
+            <div class="koleksi card">
+                <img src="https://havitsmart.com/cdn/shop/collections/game-series-431461_1350x760.jpg?v=1756459208" alt="gaming">
+            </div>
+            <div class="koleksi card">
+                <img src="https://cdn.shopify.com/s/files/1/0755/1365/9703/files/Property_1_Mobile_Accessories.png?v=1749106507&width=2048" alt="Accessories">
+            </div>
+            <div class="koleksi card">
+                <img src="https://havitsmart.com/cdn/shop/collections/smart-life-564025.jpg?v=1756459238" alt="smart-life">
+            </div>
+        </div>
+        <div class="btn-wrapper">
+            <button type="button" class="btn btn-secondary">VIEW ALL</button>
+        </div>
+
+
+
+        <!--untuk Learn More-->
+        <div class="learn">
+            <h1 class="judul" style="font-weight: bold;margin-left: 25px;">Have It, Have Fun.</h1>
+
+            <div style="margin-bottom: 40px;" class="image-overlay">
+                <img src="https://havitsmart.com/cdn/shop/files/20250930-162707_e222d32d-eb7f-44bf-a905-930f7afac0e2.jpg?v=1760689058&width=1920"
+                    alt="havitsmart">
+            </div>
+
+            <div class="gambar-overlay">
+                <h1 class="judul" style="font-weight: bold;">Mute The Noise, <br> Own The Show</h1>
+                <img src="https://havitsmart.com/cdn/shop/files/H670BT_fd422a83-a9a7-4c61-beef-d02a3e55d9ed.jpg?v=1756800926&width=2400" alt="learn">
+            </div>
+            <div class="image-overlay">
+                <h1 class="judul" style="font-weight: bold;">Born Open.<br>Built To Honor.</h1>
+                <img src="https://havitsmart.com/cdn/shop/files/H8_6a74a4a6-62d4-4d07-aa81-a606003784e8.jpg?v=1756800757&width=2400" alt="learn">
+            </div>
+        </div>
+            <div style="text-align: center; margin: 50px auto;">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur soluta libero totam numquam.<br> lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi distinctio,<br> quibusdam incidunt impedit beatae sunt, harum quis veniam ut nemo cumque dolores,<br> natus reprehenderit magni fuga ipsum commodi consequatur.</p>
+            </div>
+            <!--Ini bagian News-->
+            <div>
+                <div class="best">
+                    <h1 style="font-weight: bold; margin-bottom: 25px;">News & Event</h1>
+                    <!--End card-->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://havitsmart.com/cdn/shop/articles/a-landmark-partnership-havit-partners-with-three-top-international-esports-teams-to-expand-global-presence-2445146_1600x800.jpg?v=1760663600" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">A Landmark Partnership: HAVIT Partners with Three Top International Esports Teams to Expand Global Presence</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://havitsmart.com/cdn/shop/articles/the-138th-canton-fair-havit-draws-the-spotlight-with-immersive-design-and-innovative-sound-4003776_1600x800.jpg?v=1760580729" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">The 138th Canton Fair: HAVIT Draws the Spotlight with Immersive Design and Innovative Sound</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="https://havitsmart.com/cdn/shop/articles/the-return-of-the-ltas-champions-havit-vks-continue-the-esports-legacy-7826229_1800x.jpg?v=1760602863" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Return of the LTAS Champions! HAVIT × VKS Continue the Esports Legacy</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End card-->
+                </div>
+            </div>
+
+    </section>
+    <!-- untuk footer-->
+    <footer>
+        <div class="footer">
+            <h5>Lorem Ipsum</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
